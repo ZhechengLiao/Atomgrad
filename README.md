@@ -1,6 +1,6 @@
 # Atomgrad
 <p align="center">
-<img src="\atomgrad.png" width=200 >
+<img src="/atomgrad.png" width=200 >
 </p>
 
 ## Introduction
