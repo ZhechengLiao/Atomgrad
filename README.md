@@ -1,6 +1,6 @@
 # Atomgrad
 <p align="center">
-<img src="/atomgrad.png" width=200 >
+<img src="/resources/atomgrad.png" width=200 >
 </p>
 
 ## Introduction
@@ -9,6 +9,8 @@ Atomgrad is a simple version AI frame work like pytorch following [micrograd](ht
 ## ToDo
 - [x] Basic data structure for neuron network
 - [x] Data structure for neuron network
+- [ ] Tensor data structure
+  - [ ] 
 - [ ] Transformers
 - [ ] Stable Diffusion
 - [ ] GPT model
