@@ -1,5 +1,6 @@
 import torch
 from Atom import Atom
+from nn import MLP, Layer, Neuron
 
 x = Atom(-4.0)
 z = 2 * x + 2 + x

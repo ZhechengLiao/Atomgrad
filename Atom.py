@@ -25,6 +25,16 @@ class Atom:
         out._backward = _backward
         return out
     
+    def __pow__(self, other):
+        assert isinstance(other, (int, float)), "only support int/float power"
+        out = Atom(self.data ** other, (self,), f'**{other}')
+
+        def _backward():
+            self.grad += other * self.data ** (other - 1) * out.grad
+
+        out._backward = _backward
+        return out
+    
     def relu(self):
         out = Atom(0 if self.data < 0 else self.data, (self,), 'ReLU')
         def _backward():
@@ -56,7 +66,7 @@ class Atom:
     def __rmul__(self, other):
         return self * other
     
-    def __sub__(self, other):
+    def __rsub__(self, other):
         return self + (-other)
     
     def __radd__(self, other):
