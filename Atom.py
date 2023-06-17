@@ -3,8 +3,8 @@ class Atom:
         self.data = data
         self.grad = 0.0
         self._backward = lambda: None # initially do nothing
-        self._prev = _children
-        self._opt = _opt
+        self._prev = set(_children)
+        self.opt = _opt
         
     def __add__(self, other):
         other = other if isinstance(other, Atom) else Atom(other)
@@ -19,8 +19,9 @@ class Atom:
         other = other if isinstance(other, Atom) else Atom(other)
         out = Atom(self.data * other.data, (self, other), '*')
         def _backward():
-            self.grad += other.grad * out.grad
-            other.grad += self.grad * out.grad 
+            # calculus: chain rule
+            self.grad += other.data * out.grad
+            other.grad += self.data * out.grad 
         out._backward = _backward
         return out
     
