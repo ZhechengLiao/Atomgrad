@@ -17,10 +17,16 @@ Atomgrad is a simple version AI frame work like pytorch. Build from scratch to i
 ## Example
 ### Basic Engine
 ```python
-a = Atom(4.0)
-b = Atom(3.0)
-c = a + b 
-print(c) # Atom(data=7.0, grad=0.0)
+# Forward propagation
+x = Atom(-4.0)
+z = 2 * x + 2 + x
+q = z.relu() + z * x
+h = (z * z).relu()
+y = h + q + q * x
+print(y) # Atom(data=-20.0, grad=1.0)
+
+# Backward propagation
+y.backward() # calculate all gradient for input
 ```
 
 

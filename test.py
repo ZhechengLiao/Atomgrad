@@ -9,6 +9,8 @@ y = h + q + q * x
 y.backward()
 xmg, ymg = x, y
 
+print(y)
+
 x = torch.tensor(-4.0, requires_grad=True)
 x.requires_grad = True
 z = 2 * x + 2 + x
