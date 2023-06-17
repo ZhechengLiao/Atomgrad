@@ -4,7 +4,7 @@
 </p>
 
 ## Introduction
-Atomgrad is a simple version AI frame work like pytorch. Build from scratch to implement neuron network training and a lot of deep learning alogrithm, including transformers, GPT, stable diffusion, etc...(This is only for learning deep learning)
+Atomgrad is a simple version AI frame work like pytorch following [micrograd](https://github.com/karpathy/micrograd). Build from scratch to implement neuron network training and a lot of deep learning alogrithm, including transformers, GPT, stable diffusion, etc...(This is only for learning deep learning)
 
 ## ToDo
 - [x] Basic data structure for neuron network
