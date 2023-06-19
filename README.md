@@ -20,5 +20,5 @@ Atomgrad is a simple version AI frame work like pytorch following [micrograd](ht
 ### Basic Engine
 - [autograd](https://github.com/ZhechengLiao/atomgrad/blob/master/examples/autograd_test.py)
 - [gradient descent](https://github.com/ZhechengLiao/atomgrad/blob/master/examples/gradient_descent.py)
-- [company name generator - bigram]()
+- [company name generator - bigram](https://github.com/ZhechengLiao/atomgrad/blob/master/examples/company_name_generator_bigram.ipynb)
 
